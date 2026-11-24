@@ -5,7 +5,11 @@
 - Estudiante: Hodaia Yemal
 - Tecnologías: HTML, CSS y JavaScript
 - Repositorio: https://github.com/2023hodaiayemal-netizen/calculadora-cientifica
-- Sketch previo: `evidencias/sketch-calculadora.drawio` y `evidencias/sketch-calculadora.png`
+- Sketch previo: `evidencias/sketch-calculadora.png`
+
+**Evidencia del editor:** captura auténtica del archivo abierto en diagrams.net/moqups.
+
+![Sketch de la calculadora abierto en moqups](evidencias/evidencia-moqups.png)
 
 ## Planeamiento
 

@@ -6,8 +6,10 @@ Calculadora responsive con operaciones básicas, potencia y raíz cuadrada, impl
 
 - Estudiante: Hodaia Yemal
 - Tecnologías: HTML, CSS y JavaScript
-- Sketch local: [`evidencias/sketch-calculadora.drawio`](evidencias/sketch-calculadora.drawio)
+- Sketch local: [`evidencias/sketch-calculadora.png`](evidencias/sketch-calculadora.png)
 - Documentación completa: [`documentacion.md`](documentacion.md)
+
+![Sketch de la calculadora abierto en moqups](evidencias/evidencia-moqups.png)
 
 ## Prompts utilizados
 
