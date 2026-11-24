@@ -28,6 +28,10 @@
     return { ok: true, value };
   }
 
+  function formatResult(value) {
+    return String(Number(value.toPrecision(12)));
+  }
+
   function init() {
     const inputA = document.querySelector('#operando-a');
     const inputB = document.querySelector('#operando-b');
@@ -35,7 +39,7 @@
     const message = document.querySelector('#mensaje');
     function run(operation) {
       const result = calculate(operation, inputA.value, inputB.value);
-      output.textContent = result.ok ? String(result.value) : '—';
+      output.textContent = result.ok ? formatResult(result.value) : '—';
       message.textContent = result.ok ? '' : result.message;
     }
     document.querySelectorAll('[data-operation]').forEach((button) => button.addEventListener('click', () => run(button.dataset.operation)));
@@ -43,6 +47,6 @@
     document.querySelector('#limpiar').addEventListener('click', () => { inputA.value = ''; inputB.value = ''; output.textContent = '—'; message.textContent = ''; inputA.focus(); });
   }
 
-  if (typeof module !== 'undefined') module.exports = { calculate };
+  if (typeof module !== 'undefined') module.exports = { calculate, formatResult };
   if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', init);
 }());

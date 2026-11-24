@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { calculate } = require('../script.js');
+const { calculate, formatResult } = require('../script.js');
 
 test('resuelve operaciones básicas con números enteros y decimales', () => {
   assert.equal(calculate('add', '2', '3').value, 5);
@@ -20,4 +20,8 @@ test('rechaza entradas inválidas y resultados engañosos', () => {
   assert.match(calculate('divide', '4', '0').message, /cero/i);
   assert.match(calculate('sqrt', '-1', '').message, /negativo/i);
   assert.equal(calculate('power', '1e308', '2').ok, false);
+});
+
+test('presenta decimales sin artefactos de punto flotante', () => {
+  assert.equal(formatResult(calculate('add', '0.1', '0.2').value), '0.3');
 });
